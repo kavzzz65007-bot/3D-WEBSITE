@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FixMyCampus – Launch Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #09090b 100%);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: rgba(24, 24, 27, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(24px);
+      border-radius: 28px;
+      padding: 44px 36px;
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(99, 102, 241, 0.2);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #a5b4fc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .btn-launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-launch:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.65);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+      text-align: left;
+    }
+    .feature-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    .feature-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .feature-desc {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+    .instructions {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #64748b;
+    }
+    .instructions code {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #cbd5e1;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">
+      <span class="pulse-dot"></span>
+      <span>Autonomous Campus Solver</span>
+    </div>
+
+    <h1>FixMyCampus</h1>
+    <p>AI-Powered Campus Problem Solver with Interactive Spline 3D Integration, Real-Time Issue Triage, and Dispatch Dashboard.</p>
+
+    <a href="http://localhost:5173" class="btn-launch" id="launchBtn">
+      <span>🚀 Open Web App (localhost:5173)</span>
+    </a>
+
+    <div class="grid">
+      <div class="feature-box">
+        <div class="feature-title">✨ Spline 3D Hero</div>
+        <p class="feature-desc">Interactive 3D model active in hero section.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-title">🤖 AI Duplicate Guard</div>
+        <p class="feature-desc">Real-time deduplication and urgency triage.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-title">📱 QR Code Reporting</div>
+        <p class="feature-desc">Scan classroom and lab barcodes.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-title">🛡️ Admin Command</div>
+        <p class="feature-desc">Kanban/Table technician assignment.</p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      Running locally? Double-click <code>start-dev.bat</code> or run <code>npm run dev</code> in <code>frontend</code> and <code>backend</code>.
+    </div>
+  </div>
+
+  <script>
+    // Automatic ping to redirect if localhost:5173 is already running
+    fetch('http://localhost:5173/', { mode: 'no-cors' })
+      .then(() => {
+        const btn = document.getElementById('launchBtn');
+        if (btn) {
+          btn.innerHTML = '<span>⚡ Server Active - Launching FixMyCampus...</span>';
+          setTimeout(() => {
+            window.location.href = 'http://localhost:5173';
+          }, 800);
+        }
+      })
+      .catch(() => {
+        // Dev server not yet running; user can click button once started
+      });
+  </script>
+</body>
+</html>
